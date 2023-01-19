@@ -1,0 +1,37 @@
+ul.contact-info {
+   font-weight: 600;
+   letter-spacing: .1rem;
+   max-width: fit-content;
+   margin-inline: auto;
+}
+ul.contact-info li {
+   margin-bottom: 1.5rem;
+}
+ul.contact-info li:last-child {
+   margin-bottom: 0;
+}
+ul.contact-info svg {
+   width: 1.2rem;
+   height: 1.2rem;
+   padding-right: 1rem;
+}
+address {
+   display: inline;
+}
+
+iframe.map {
+   width: 100%;
+   height: 20rem;
+}
+
+.hours-time {
+   max-width: fit-content;
+   margin-inline: auto;
+   text-align: left;
+}
+time {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 3rem;
+   margin-bottom: 1.2rem;
+}

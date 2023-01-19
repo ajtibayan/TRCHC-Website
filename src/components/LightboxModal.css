@@ -1,0 +1,44 @@
+.lightbox {
+   position: fixed;
+   inset: 0;
+   width: 100%;
+   height: 100%;
+   background: var(--overlay);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 999;
+}
+.lightbox img {
+   width: auto;
+   max-height: 95vh;
+   box-shadow: .3rem .3rem 1rem var(--overlay);
+}
+.lightbox > svg {
+   position: absolute;
+   width: 2rem;
+   height: 2rem;
+   color: var(--white);
+   cursor: pointer;
+}
+
+.lightbox > svg.fa-xmark {
+   top: 1rem;
+   right: 1rem;
+}
+.lightbox > svg.fa-arrow-left {
+   left: 1rem;
+}
+.lightbox > svg.fa-arrow-right {
+   right: 1rem;
+}
+
+@media (max-width: 72em) {
+   .lightbox img {
+      max-width: 100%;
+   }
+   .lightbox > svg {
+      width: 1.5rem;
+      height: 1.5rem;
+   }
+}

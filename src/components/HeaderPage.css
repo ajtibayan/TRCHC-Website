@@ -1,0 +1,53 @@
+.top-section {
+   display: grid;
+   place-items: center;
+   grid-template-rows: .8fr 1fr .5fr;
+   gap: 2rem;
+   min-height: 40vh;
+   padding: 0;
+   background-color: rgba( var(--primary), .6);
+   z-index: 9;
+}
+
+.top-section h1 {
+   font-size: 2.56rem;
+   color: var(--white);
+}
+
+.goback {
+   width: 3rem;
+   height: 3rem;
+   position: relative;
+}
+.goback::before, .goback::after {
+   content: '';
+   display: inline-block;
+   position: absolute;
+   inset: 0;
+   top: 2rem;
+   width: 100%;
+   height: .1rem;
+   background-color: var(--white);
+   transform: rotate(45deg);
+   transition: transform var(--cubic-bez-4ms);
+}
+.goback::after {
+   transform: rotate(-45deg);
+}
+.goback:hover::before {
+   transform: translateX(1.05rem) rotate(45deg);
+}
+.goback:hover::after {
+   transform: translateX(-1.05rem) rotate(-45deg);
+}
+
+.top-section > svg.badge-icon {
+   height: 2rem;
+   width: 2rem;
+   color: var(--white);
+}
+
+.top-section > .badge-icon {
+   margin-bottom: -4rem;
+   padding: 1.5rem;
+}

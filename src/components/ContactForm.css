@@ -1,0 +1,67 @@
+form {
+   margin-top: 3rem;
+}
+
+label {
+   position: absolute;
+   display: block;
+}
+label > svg {
+   height: 1.3rem !important;
+   padding-top: 1rem;
+   padding-left: 1rem;
+   color: rgba( var(--primary), .6);
+}
+
+input, textarea {
+   width: 100%;
+   padding: 1rem 1.5rem 1rem 3rem;
+   margin-bottom: 1rem;
+   border: .15rem solid rgb( var(--violet) );
+	border-radius: .8rem;
+   font-family: 'Ubuntu', sans-serif;
+   font-size: 1rem;
+   font-weight: 600;
+   letter-spacing: .1rem;
+   color: var(--white);
+   transition: var(--cubic-bez-4ms);
+}
+input:hover, textarea:hover {
+   border-bottom-color: rgba( var(--primary), .6);
+}
+
+input::placeholder {
+   color: var(--white);
+}
+
+.sent, .error {
+   text-align: center;
+   margin-bottom: 1rem;
+   color: var(--green);
+   transition: var(--cubic-bez-4ms);
+}
+.error {
+   color: var(--red); 
+}
+
+button[type="submit"] {
+   aspect-ratio: 1;
+   display: block;
+   margin: auto;
+   padding: 1.2rem;
+   margin-top: 1rem;
+   border-radius: 50%;
+   border: .15rem solid rgb( var(--primary) );
+   background-color: transparent;
+   color: rgb( var(--primary) );
+   transition: var(--cubic-bez-4ms);
+}
+
+button[type="submit"] svg {
+   height: 1.6rem;
+}
+
+button[type="submit"]:hover {
+   background-color: rgb( var(--primary) );
+   color: var(--white);
+}

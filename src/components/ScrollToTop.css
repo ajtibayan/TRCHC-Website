@@ -1,0 +1,40 @@
+button.gotop {
+   display: none;
+   position: fixed;
+   right: 3rem;
+   bottom: 3rem;
+   aspect-ratio: 1;
+   padding: .8rem 1rem;
+   border-radius: 50%;
+   border: .15rem solid rgb( var(--primary) );
+   color: rgb( var(--primary) );
+   background-color: transparent;
+   animation: fadeIn ease-out 1.5s;
+   transition: var(--cubic-bez-4ms);
+   z-index: 995;
+}
+button.gotop:hover {
+   color: var(--white);
+   background-color: rgb( var(--primary) );
+}
+
+button.gotop svg {
+   height: 1.8rem;
+}
+
+.visible {
+   display: block !important;
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@media (max-width: 72em) {
+   button.gotop {
+      right: 1rem;
+      bottom: 1rem;
+      background-color: var(--black);
+   }
+}

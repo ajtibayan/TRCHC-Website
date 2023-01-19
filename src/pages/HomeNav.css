@@ -1,0 +1,117 @@
+header.logo {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   padding-block: 1rem;
+   z-index: 9;
+}
+header img {
+   position: relative;
+   width: 15rem;
+   z-index: 10;
+}
+
+main.slider {
+	overflow: hidden;
+   scroll-behavior: smooth;
+}
+.slider {
+   background-image: url('../img/slider.jpg');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+nav#navbar h1 {
+   color: var(--white);
+}
+nav#navbar,
+nav#navbar ul,
+nav#navbar ul li,
+nav#navbar ul li a {
+   width: 100%;
+   height: 100%;
+}
+
+nav#navbar ul {
+   min-height: 100vh;
+   display: grid;
+   grid-template-columns: repeat(6, 25vw);
+}
+nav#navbar ul li {
+   text-align: center;
+   transition: background-color var(--cubic-bez-4ms);
+}
+nav#navbar ul li:hover {
+   background-color: rgba(0,0,0, .6);
+}
+nav#navbar ul li a {
+   display: grid;
+   place-items: center;
+   grid-template-rows: .8fr 1fr 1fr;
+   text-decoration: none;
+}
+nav#navbar ul li a section {
+   grid-area: 2;
+}
+nav#navbar ul li a section p.badge {
+   transform: translateY(-4rem);
+   transition: all var(--cubic-bez-4ms);
+   opacity: 0;
+}
+nav#navbar ul li a:hover section p.badge {
+   transform: translateY(0);
+   opacity: 1;
+}
+
+nav#navbar ul li a footer {
+   grid-area: 3;
+   align-self: end;
+   padding-bottom: 1.5rem;
+   transform: translateY(100%);
+   transition: all var(--cubic-bez-4ms);
+}
+nav#navbar ul li a:hover footer {
+   transform: translateY(0);
+}
+nav#navbar ul li a footer svg {
+   width: 2rem;
+   height: 2rem;
+   color: var(--white);
+}
+nav#navbar ul li a footer h3 {
+   color: var(--primary);
+   font-style: italic;
+	font-weight: 300;
+}
+nav#navbar ul li a footer p {
+   color: var(--white);
+   font-weight: 500;
+}
+
+
+@media (max-width: 72em) {
+   main.slider {
+      overflow: auto;
+   }
+   .slider {
+      background-image: url('../img/slider-sm.jpg');
+   }
+   nav#navbar ul {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-top: 7.5rem;
+   }
+   nav#navbar ul li a {
+      grid-template-rows: 1fr;
+   }
+   nav#navbar ul li a section {
+      grid-area: 1;
+   }
+   nav#navbar ul li a section p.badge {
+      transform: translateY(0);
+      opacity: 1;
+   }
+   nav#navbar ul li a footer {
+      display: none;
+   }
+}

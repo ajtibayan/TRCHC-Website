@@ -1,0 +1,23 @@
+.gallery {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   padding: 0;
+   margin-top: 3rem;
+}
+.gallery img.span2 {
+   grid-column: span 2;
+}
+.gallery > img:hover {
+   -webkit-filter: brightness(.5);
+   filter: brightness(.5);
+   transition: var(--cubic-bez-4ms);
+ }
+
+@media (max-width: 72em) {
+   .gallery {
+      grid-template-columns: 1fr;
+   }
+   .gallery img.span2 {
+      grid-column: unset;
+   }
+}

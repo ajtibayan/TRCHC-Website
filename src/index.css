@@ -1,0 +1,234 @@
+/*
+*	Author: Travolgi
+*	Name: Sled
+*	Version: 1.2.0
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: none;
+	list-style: none;
+	outline: none;
+	box-sizing: border-box;
+}
+
+:root {
+	--white: rgb(254, 245, 255);
+	--black: #130912;
+	--primary: 239, 72, 1;
+	--violet: 51, 26, 54;
+	--green: #08b308;
+	--red: #e40b00;
+	--w-overlay: rgba(255,255,255,.85);
+	--overlay: rgba(0,0,0,.5);
+
+	--cubic-bez-4ms: .4s cubic-bezier(.5, .05, .155, .99);
+}
+
+::-webkit-scrollbar {
+	width: .7rem;
+}
+::-webkit-scrollbar-track {
+	background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 1rem;
+}
+html {
+	scrollbar-width: thin;
+	scroll-behavior: smooth;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: var(--white);
+	background-color: var(--black);
+   overflow-x: hidden;
+}
+header, footer {
+   position: relative;
+   display: block;
+   text-align: center;
+}
+section, article, footer {
+	padding-block: 1.8rem;
+}
+body #root > footer {
+	background: url(img/bg-footer.png) no-repeat top center;
+	background-size: cover;
+}
+
+h1, h2, h3 {
+	/* font-family: 'Henny Penny', serif; */
+	color: var(--white);
+}
+h1 {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+h2 {
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+h3 {
+	font-size: 1.5rem;
+}
+a {
+	color: rgb( var(--primary) );
+	text-decoration: none;
+	transition: var(--cubic-bez-4ms);
+	cursor: pointer;
+}
+a:hover {
+	color: rgba( var(--primary), .8);
+	text-decoration: underline;
+}
+
+button {
+	background-color: rgba( var(--primary), .6);
+	cursor: pointer;
+}
+
+img {
+	width: 100%;
+}
+
+.container {
+	padding: 5rem 1rem;
+	max-width: 60rem;
+	margin-inline: auto;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	gap: 3.5rem;
+}
+.gtc-2-1 {
+	grid-template-columns: 1fr .5fr;
+}
+.gtc-x3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+.gtc-2-3-1 {
+	grid-template-columns: 2fr 3fr 1fr;
+	align-items: start;
+}
+.gtc-3-2-1 {
+	grid-template-columns: 3fr 2fr 1fr;
+	align-items: start;
+}
+.g-2 {
+	gap: 2rem;
+}
+
+.inline, ul.inline li {
+	display: inline-block;
+	padding-inline: .6rem;
+}
+
+.subtitle {
+   font-style: italic;
+   font-weight: 300;
+	color: rgb( var(--primary) );
+}
+.italic {
+   font-style: italic;
+}
+.txt-center {
+	text-align: center;
+}
+.txt-left {
+	text-align: left;
+}
+.bg-violet {
+	background: rgb( var(--violet) );
+}
+.rounded {
+	border-radius: .8rem;
+}
+.p-1 {
+	padding: 1.5rem 1.2rem;
+}
+.mb-2 {
+	margin-bottom: 2rem;
+}
+
+.badge {
+	display: inline-block;
+   border-radius: 1rem;
+   padding: .2rem 1rem;
+   font-style: italic;
+   font-weight: 300;
+   color: var(--white);
+   background-color: rgba( var(--primary), .6);
+}
+.badge-icon {
+	display: inline-block;
+   width: 5rem;
+   aspect-ratio: 1;
+	padding: 1rem;
+   border-radius: 50%;
+   background-color: rgb( var(--primary) );
+}
+.badge-icon > svg {
+   width: 2.5rem;
+   height: 2rem;
+   padding-top: .5rem;
+}
+
+a.badge, div.badge {
+	border: .15rem solid rgba( var(--primary), .6);
+	transition: var(--cubic-bez-4ms);
+	text-transform: uppercase;
+	font-weight: 700;
+}
+a.badge:hover, div.badge:hover {
+	color: rgb( var(--primary) );
+	background-color: transparent;
+	border: .15rem solid rgb( var(--primary) );
+	text-decoration: none;
+}
+
+.top-shadow {
+   position: absolute;
+   inset: 0;
+   width: 100%;
+   height: 8rem;
+   background-image: linear-gradient(var(--overlay), transparent);
+}
+
+.pulse {
+	animation: pulse 4s infinite ease-in-out alternate;
+	transition: 1s ease;
+}
+@keyframes pulse {
+	0% { transform: scale(1); }
+	40% { transform: scale(0.9); }
+	to { transform: scale(1.05); }
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	white-space: nowrap;
+}
+
+@media (max-width: 72em) {
+	.grid, .gtc-2-1, .gtc-x3, .gtc-2-3-1 {
+		grid-template-columns: 1fr;
+	}
+}

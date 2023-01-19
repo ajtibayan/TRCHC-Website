@@ -1,0 +1,22 @@
+.review {
+   padding: 2rem;
+   text-align: center;
+}
+
+.review img {
+   width: 6.5rem;
+   border-radius: 100%;
+   margin-bottom: .5rem;
+}
+
+.review span {
+   display: block;
+   font-size: 1.3rem;
+   margin-bottom: 1rem;
+}
+
+.rating-1::before { content: '\2B50'; }
+.rating-2::before { content: '\2B50\2B50'; }
+.rating-3::before { content: '\2B50\2B50\2B50'; }
+.rating-4::before { content: '\2B50\2B50\2B50\2B50'; }
+.rating-5::before { content: '\2B50\2B50\2B50\2B50\2B50'; }
