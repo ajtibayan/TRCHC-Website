@@ -26,7 +26,7 @@ function ContactForm() {
 
    useEffect(() => {
       if(Object.keys(formErrs).length === 0 && isSubmit) {
-         emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+         emailjs.sendForm('service_tapkhu6', 'template_ef3vtfl', form.current, 'JWyYUnQ7x360eI2We')
             .then(result => {
                console.log(result.text);
                setFormVals(initValue);
@@ -75,6 +75,12 @@ function ContactForm() {
             <FontAwesomeIcon icon={solid('user')} />
             <span className="sr-only">Your Name</span>
          </label>
+         <input
+            id="contact_number"
+            name="contact_number"
+            type="hidden"
+            value={Math.random() * 100000 | 0}
+         />
          <input
             id="name"
             name="name"

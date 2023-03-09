@@ -1,5 +1,6 @@
 {
   "name": "trchc",
+  "homepage": "https://torontorcheliclub.com/staging",
   "version": "1.0.0",
   "private": true,
   "dependencies": {

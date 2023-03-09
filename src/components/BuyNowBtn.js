@@ -7,12 +7,12 @@ function BuyNowBtn() {
    const styleBtn = {
       zIndex: 999999,
       position: 'fixed',
-      top: '2.5rem',
+      top: '1.5rem',
       right: '-.8rem',
       borderRadius: '0',
       borderRight: '0',
       paddingRight: '2rem',
-      fontSize: '1.3rem',
+      fontSize: '1rem',
    };
 
    return (

@@ -7,6 +7,7 @@ import HeaderPage from '../components/HeaderPage';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 import bg from '../img/bg5.jpg';
+import RegistrationForm from '../components/RegistrationForm';
 
 function Where() {
    return (
@@ -33,6 +34,9 @@ function Where() {
 				<section>
 					<h2 className="txt-center">Online Registration Form</h2>
                 </section>
+
+				<RegistrationForm />
+
 			</motion.main>
 
 			<Footer />
